@@ -2,9 +2,15 @@
   "name": "simple-aws-sdk",
   "version": "1.0.0",
   "description": "Classes to make it easier to work with the AWS SDK",
-  "main": "index.js",
+  "main": "dist/saws.js",
+  "types": "dist/saws.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "jest --forceExit --coverage --verbose false"
   },
   "repository": {
     "type": "git",
